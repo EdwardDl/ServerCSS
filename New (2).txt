@@ -1,0 +1,35 @@
+VeryBigEd@gmail.com
+Ts7TS5qt6mX2
+
+______________________________________________________________________________________________
+
+
+Если эти значения приводят к помехам или потерям, пробуйте понижать значения. Я бы попробовал так:
+rate 25000
+cl_updaterate 66 
+cl_cmdrate 66 
+!Параметр cl_cmdrate должен быть равен параметру cl_updaterate
+
+Тем кто подключен к ADSL я бы рекомендовал использовать эти значения:
+rate 25000 или rate 25000 
+cl_updaterate 100 или cl_updaterate 66 
+cl_cmdrate 100 или cl_cmdrate 66 
+!Параметр cl_cmdrate должен быть равен параметру cl_updaterate
+
+Тем кто подключён к дргим провайдерам, то я бы рекомендовал использовать эти значения:
+
+rate 25000 или rate 10000 
+cl_updaterate 66 или cl_updaterate 33
+cl_cmdrate 66 или cl_cmdrate 33 
+!Параметр cl_cmdrate должен быть равен параметру cl_updaterate
+______________________________________________________________________________________________
+
+bind "F2" "buy awp; buy p228; buy hegrenade"
+bind "F3" "buy m4a1; buy p228; buy hegrenade"
+bind "F4" "buy tmp; buy p228; buy hegrenade"
+bind "F5" "buy mac10; buy p228; buy hegrenade"
+______________________________________________________________________________________________
+
+1. В admins_simple.ini пишем: "Ваш_ник" "99:z" "Ваш_пасс"
+2. В core.cfg меняем строчку "PassInfoVar" "_password": "PassInfoVar" "_smserv"
+3. Затем нужно создать файл autoexec.cfg и кинуть в папку с игрой(клиентом) \cstrike\cfg там написать: setinfo "_smserv" "Ваш_пасс"
